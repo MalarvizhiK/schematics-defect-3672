@@ -8,6 +8,11 @@ data "ibm_is_zone" "zone" {
   region = data.ibm_is_region.region.name
 }
 
+# lookup SSH public keys by name
+data "ibm_is_ssh_key" "ssh_key" {
+  name = var.ssh_key
+}
+
 data "ibm_is_image" "custom_image" {
   name = "ibm-ubuntu-18-04-1-minimal-amd64-2"
 }
