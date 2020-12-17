@@ -18,11 +18,6 @@ variable "resource_group" {
   description = "The resource group to use. If unspecified, the account's default resource group is used."
 }
 
-variable "private_ssh_key" {
-  default     = ""
-  description = "The private ssh key string to use."
-}
-
 variable "vpc_id" {
   default     = ""
   description = "The vpc id to use." 
