@@ -127,13 +127,13 @@ resource "null_resource" "ubuntu_provisioner" {
   
   // copy our example script to the server
   provisioner "file" {
-    source      = "script/install.sh"
+    source      = "install.sh"
     destination = "/root/install.sh"
   }
   
   // copy our example script to the server
   provisioner "file" {
-    source      = "script/update_script.sh"
+    source      = "update_script.sh"
     destination = "/root/update_script.sh"
   }
 
