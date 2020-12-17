@@ -125,4 +125,17 @@ resource "null_resource" "ubuntu_provisioner" {
     private_key = var.private_ssh_key
   }
   
+  // copy our example script to the server
+  provisioner "file" {
+    source      = "script/install.sh"
+    destination = "/root/install.sh"
+  }
+  
+  // copy our example script to the server
+  provisioner "file" {
+    source      = "script/update_script.sh"
+    destination = "/root/update_script.sh"
+  }
+
+  
   }
