@@ -1,3 +1,8 @@
+variable "TF_VERSION" {
+ default = "0.12"
+ description = "terraform engine version to be used in schematics"
+}
+
 variable "region" {
   default     = "us-south"
   description = "The VPC Region that you want your VPC, networks and the F5 virtual server to be provisioned in. To list available regions, run `ibmcloud is regions`."
