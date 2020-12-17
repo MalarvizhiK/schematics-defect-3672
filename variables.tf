@@ -18,12 +18,27 @@ variable "resource_group" {
   description = "The resource group to use. If unspecified, the account's default resource group is used."
 }
 
-variable "vpc_url" {
-  default     = "https://us-south.iaas.cloud.ibm.com"
-  description = "The public endpoint url of VPC."
-}
-
 variable "private_ssh_key" {
   default     = ""
   description = "The private ssh key string to use."
+}
+
+variable "vpc_id" {
+  default     = ""
+  description = "The vpc id to use." 
+}
+
+variable "ssh_key" {
+  default     = ""
+  description = "The ssh key to use. If unspecified, 'my-ssh-key' is used."
+}
+
+variable "private_ssh_key" {
+  default     = "--BEGIN--"
+  description = "The private ssh key to use."
+}
+
+variable "failover_function_subnet_id" {
+  default     = ""
+  description = "subnet1 ipv4 cidr block."
 }
